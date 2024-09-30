@@ -1,0 +1,27 @@
+.versionCard {
+  padding: 1rem 2rem;
+  background-color: #1b263b;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.versionCard h3 {
+  font-size: 3rem;
+}
+
+.versionCard small {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.yourVersion {
+  background-color: #fca311;
+  color: #415a77;
+  transform: scale(1.1);
+}
+
+.versionCard:hover {
+  filter:brightness(1.2);
+}

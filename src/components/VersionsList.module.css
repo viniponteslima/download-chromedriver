@@ -1,0 +1,12 @@
+.versionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 90%;
+}
+
+.versionsList h2 {
+  font-size: 2rem;
+  color: #e0e1dd;
+  margin: 2rem 0 4rem;
+}
