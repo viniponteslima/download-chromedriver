@@ -3,10 +3,26 @@
   flex-direction: column;
   gap: 1rem;
   width: 90%;
+  color: #e0e1dd;
 }
 
 .versionsList h2 {
   font-size: 2rem;
-  color: #e0e1dd;
   margin: 2rem 0 4rem;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 2ch; }
+}
+
+.versionsList h4 {
+  font-size: 1rem;
+}
+
+.versionsList h4::after {
+  display: inline-flex;
+  overflow: hidden;
+  content: '...';
+  animation: load 1s steps(4) infinite;
 }

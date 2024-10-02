@@ -30,19 +30,20 @@ export default function VersionsList() {
   return (
     <div className={styles.versionsList}>
       <h2>Download Chromedriver:</h2>
-     {versions && versions.map((version, index) => {
+     {(versions && versions.length > 0) ? versions.map((version, index) => {
         const rootVersion = version.version.split('.').slice(0, 2).join('.');
         const isSameVersion = userAgentVersion === rootVersion;
         
         return (
           <VersionCard 
-            text={version.version.split('.').slice(0, 2).join('.')}
+            text={rootVersion}
             link={version.downloads.chrome[3].url} 
             key={index} 
             sameVersion={isSameVersion}
           />
         )}) 
-      }
+      :           
+      <h4>Loading</h4>}
     </div>
   );
 }
