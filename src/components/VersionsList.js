@@ -34,16 +34,17 @@ export default function VersionsList() {
         const rootVersion = version.version.split('.').slice(0, 2).join('.');
         const isSameVersion = userAgentVersion === rootVersion;
         
-        return (
-          <VersionCard 
-            text={rootVersion}
-            link={version.downloads.chrome[3].url} 
-            key={index} 
-            sameVersion={isSameVersion}
-          />
-        )}) 
-      :           
-      <h4>Loading</h4>}
+        if (version.downloads.chromedriver) { 
+          return (
+            <VersionCard 
+              text={rootVersion}
+              link={version.downloads.chromedriver[3].url} 
+              key={index} 
+              sameVersion={isSameVersion}
+            />
+          )}
+        }) 
+      : <h4>Loading</h4>}
     </div>
   );
 }
