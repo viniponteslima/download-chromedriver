@@ -6,7 +6,9 @@ import VersionCard from './VersionCard';
 export default function VersionsList() {
   const [versions, setVersions] = useState([]);
 
-  const userAgentVersion = navigator.userAgent.match(/Chrome\/(\d+\.\d+)/)[1]
+  const userAgent = navigator.userAgent
+
+  const userAgentVersion = userAgent.match(/Chrome\/(\d+\.\d+)/) ? userAgent.match(/Chrome\/(\d+\.\d+)/)[1] : ''
 
   useEffect(() => {
     async function fetchVersions() {
